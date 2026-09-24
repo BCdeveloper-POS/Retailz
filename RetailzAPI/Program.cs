@@ -21,18 +21,19 @@ namespace RetailzAPI
                 {
                     try
                     {
-                       /* if (current.StoreSettings.StoreId == 12914)
-                        {
-                            Console.WriteLine("Fetching the storeid " + current.StoreSettings.StoreId);
-                        }
-                        else { continue; }*/
+                        //if (current.StoreSettings.StoreId == 12374 )
+                        //{
+                        //    Console.WriteLine("Fetching_storeid"+ current.StoreSettings.StoreId);
+                        //}
+                        //else
+                        //{
+                        //    continue; 
+                        //}
+
                         if (current.PosName.ToUpper() == "RETAILZPOS")
                         {
-                            
-                                
-                                Retailz retailz = new Retailz(current.StoreSettings.StoreId, current.StoreSettings.POSSettings.tax, current.StoreSettings.POSSettings.BaseUrl, current.StoreSettings.POSSettings.AuthKey, current.StoreSettings.POSSettings.Token);
-                            
-
+                            //   Retailz retailz = new Retailz(current.StoreSettings.StoreId, current.StoreSettings.POSSettings.tax, current.StoreSettings.POSSettings.BaseUrl, current.StoreSettings.POSSettings.AuthKey, current.StoreSettings.POSSettings.Token);
+                            Retailz retailz = new Retailz(current.StoreSettings.StoreId, current.StoreSettings.POSSettings.tax, current.StoreSettings.POSSettings.BaseUrl, current.StoreSettings.POSSettings.AuthKey, current.StoreSettings.POSSettings.Token, current.config); // NEW - pass DB Config
                         }
                     }
                     catch (Exception ex)
