@@ -21,13 +21,13 @@ namespace RetailzAPI
                 {
                     try
                     {
-                        //if (current.StoreSettings.StoreId == 12374 )
+                        //if (current.StoreSettings.StoreId == 12419)
                         //{
-                        //    Console.WriteLine("Fetching_storeid"+ current.StoreSettings.StoreId);
+                        //    Console.WriteLine("Fetching_storeid" + current.StoreSettings.StoreId);
                         //}
                         //else
                         //{
-                        //    continue; 
+                        //    continue;
                         //}
 
                         if (current.PosName.ToUpper() == "RETAILZPOS")
