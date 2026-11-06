@@ -63,8 +63,8 @@ namespace RetailzAPI.Models
                 {
                     con.Open();
 
-                    Console.WriteLine(con.Database);
-                    Console.WriteLine(con.DataSource);
+                   // Console.WriteLine(con.Database);
+                   // Console.WriteLine(con.DataSource);
 
                     using (SqlCommand cmd = new SqlCommand())
                     {

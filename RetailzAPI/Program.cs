@@ -21,7 +21,7 @@ namespace RetailzAPI
                 {
                     try
                     {
-                        //if (current.StoreSettings.StoreId == 12419)
+                        //if (current.StoreSettings.StoreId == 11864)
                         //{
                         //    Console.WriteLine("Fetching_storeid" + current.StoreSettings.StoreId);
                         //}

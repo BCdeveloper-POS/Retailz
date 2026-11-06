@@ -95,7 +95,7 @@ namespace RetailzAPI
                     }
 
                     // Complete response: all products in one valid JSON array file
-                    File.WriteAllText(storeid + "Full_API_Response.json", allProducts.ToString(Newtonsoft.Json.Formatting.Indented));
+                    //File.WriteAllText(storeid + "Full_API_Response.json", allProducts.ToString(Newtonsoft.Json.Formatting.Indented));
                 }
             }
             catch (Exception ex)
@@ -171,6 +171,14 @@ namespace RetailzAPI
                             decimal whole = Math.Floor(pdf.Price);
                             decimal cents = pdf.Price - whole;
                             pdf.Price = cents <= 0.49M ? whole + 0.49M : whole + 0.99M;
+                            fnf.Price = pdf.Price;
+                        }
+
+                        // NEW - Store 11864 (Bay Shore Wines): apply 9.40% markup, then force price to end in .99
+                        if (storeid == 11864 && pdf.Price > 0)
+                        {
+                            pdf.Price = pdf.Price + (pdf.Price * 0.094M);   // 9.40% markup
+                            pdf.Price = Math.Floor(pdf.Price) + 0.99M;      // round UP to .99 regardless of decimals
                             fnf.Price = pdf.Price;
                         }
 
